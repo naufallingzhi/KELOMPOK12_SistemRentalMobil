@@ -15,7 +15,6 @@
         </div>
         <div class="content">
             <h2>RENTAL<br><span>MOBIL</span></h2>
-            <a href="tamu.php"><button type="button">Explore</button></a>
             <a href="login.php"><button type="button">login</button></a>
             <a href="login_admin.php"><button type="button">login for admin</button></a>
         </div>

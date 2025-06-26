@@ -6,7 +6,7 @@
 
     $db = new mysqli($server,$username,$password,$db_name);
 
-    if(!$db){ #jika $db gagal terbaca menggunakan 'die' untuk mematikan
+    if(!$db){ 
         die("Database connection failed");
     }
 ?>

@@ -25,7 +25,6 @@ echo <<<EOT
     <nav class="navtop">
     	<div>
     		<h1>Pesan</h1>
-			<a href="create_user.php"><i></i>Kelola Pesanan</a>
 			<a href="index1.php"><i></i>Logout</a>
     	</div>
     </nav>

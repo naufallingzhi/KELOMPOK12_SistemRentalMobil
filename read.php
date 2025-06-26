@@ -69,7 +69,7 @@ function formatPrice($price) {
                     <a href="delete.php?id=<?= $order['id'] ?>" class="trash">
                         <i class="fas fa-trash fa-xs"></i>
                     </a>
-                </td>
+                </td>   
             </tr>
             <?php endforeach; ?>
         </tbody>
