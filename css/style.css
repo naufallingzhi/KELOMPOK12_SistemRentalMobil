@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --yellow:#f9d806;
+    --light-yellow:#ffee80;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.1rem solid rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.heading{
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 4.5rem;
+    background-color: black;
+    color: white;
+}
+
+.heading span{
+    position: relative;
+    z-index: 0;
+}
+
+.heading span::before{
+    content: '';
+    position: absolute;
+    bottom:1rem; left:0;
+    height: 100%;
+    width: 100%;
+    background: var(--light-yellow);
+    z-index: -1;
+    clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:var(--light-yellow);
+    color:var(--black);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.btn:hover{
+    background:var(--yellow);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left:0; right:0;
+    padding:3rem 9%;
+    z-index: 1000; 
+    background: #fff;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color:var(--black);
+    font-weight: bold;
+}
+
+.header .logo span{
+    color:var(--yellow);
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.7rem;
+    color:var(--black);
+}
+
+.header .navbar a:hover{
+    color:var(--yellow);
+}
+
+#login-btn .btn{
+    margin-top: 0;
+}
+
+#login-btn i{
+    display: none;
+    font-size: 2.5rem;
+    color:var(--light-color);
+}
+
+.header.active{
+    padding:2rem 9%;
+    box-shadow: var(--box-shadow);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    color:var(--light-color);
+    display: none;
+}
+
+.mode-form-container{
+    position: fixed;
+    top:-105%; left:0;
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(255,255,255,.9);
+    z-index: 10000;
+}
+
+.mode-form-container.active{
+    top:0;
+}
+
+.login-form-container{
+    position: fixed;
+    top:-105%; left:0;
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(255,255,255,.9);
+    z-index: 10000;
+}
+
+.login-form-container.active{
+    top:0;
+}
+
+.login-form-container form{
+    margin:2rem;
+    text-align: center;
+    padding:2rem;
+    width:40rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    background: #fff;
+}
+
+.login-form-container form .buttons{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+}
+
+.login-form-container form .btn{
+    display: block;
+    width:100%;
+    margin:.5rem 0;
+}
+
+.login-form-container form .box{
+    margin:.7rem 0;
+    width: 100%;
+    font-size: 1.6rem;
+    color:var(--black);
+    text-transform: none;
+    border:var(--border);
+    padding:1rem 1.2rem;
+    border-radius: .5rem;
+}
+
+.login-form-container form p{
+    padding:1rem 0;
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.login-form-container form p a{
+    color:var(--yellow);
+    text-decoration: underline;
+}
+
+.login-form-container form h3{
+    padding-bottom:1rem;
+    font-size: 2.5rem;
+    color:var(--black);
+    text-transform: uppercase;
+}
+
+.login-form-container #close-login-form{
+    position: absolute;
+    top:1.5rem; right:2.5rem;
+    font-size: 5rem;
+    color:var(--black);
+    cursor: pointer;
+}
+
+.home{
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.home h3{
+    color:var(--black);
+    font-size: 7.5vw;
+    text-transform: uppercase;
+}
+
+.home img{
+    width:100%;
+    margin:1rem 0;
+}/* Gaya CSS untuk tampilan kartu mobil (vehicles-grid) */
+        .vehicles .vehicles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Kolom responsif */
+            gap: 2rem; /* Jarak antar kartu */
+            padding: 2rem;
+            justify-content: center; /* Pusatkan kartu jika tidak memenuhi satu baris penuh */
+            max-width: 1200px; /* Lebar maksimum untuk grid */
+            margin: 0 auto; /* Pusatkan grid di halaman */
+        }
+
+        .vehicles .vehicles-grid .box {
+            background: #fff; /* Latar belakang kartu */
+            border-radius: 1rem; /* Sudut membulat */
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); /* Bayangan */
+            padding: 1.5rem;
+            text-align: center;
+            overflow: hidden; /* Pastikan tidak ada overflow */
+            transition: transform .2s; /* Efek hover */
+            position: relative; /* Penting untuk overlay status */
+        }
+
+        .vehicles .vehicles-grid .box:hover {
+            transform: translateY(-5px); /* Sedikit naik saat dihover */
+        }
+
+        .vehicles .vehicles-grid .box a {
+            text-decoration: none; /* Hapus garis bawah pada tautan */
+            color: inherit; /* Gunakan warna teks dari parent */
+            display: block; /* Pastikan seluruh area kartu bisa diklik */
+        }
+
+        .vehicles .vehicles-grid .box img {
+            height: 15rem; /* Tinggi gambar */
+            object-fit: cover; /* Pastikan gambar mengisi area dengan baik */
+            width: 100%; /* Lebar gambar mengikuti lebar kartu */
+            border-radius: 0.5rem; /* Sudut membulat untuk gambar */
+            margin-bottom: 1rem;
+        }
+
+        .vehicles .vehicles-grid .box .content h3 {
+            font-size: 1.8rem;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+
+        .vehicles .vehicles-grid .box .content .price {
+            font-size: 1.6rem;
+            color: var(--light-color);
+            margin-bottom: 1rem;
+        }
+
+        .vehicles .vehicles-grid .box .content .price span {
+            font-weight: bolder;
+            color: var(--black);
+        }
+
+        .vehicles .vehicles-grid .box .content p {
+            font-size: 1.4rem;
+            color: var(--light-color);
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+        /* Media query untuk responsivitas layar kecil */
+        @media (max-width: 768px) {
+            .vehicles .vehicles-grid {
+                grid-template-columns: 1fr; /* Satu kolom untuk layar kecil */
+                padding: 1rem;
+            }
+        }
+        /* Gaya untuk status tidak tersedia */
+        .vehicles .vehicles-grid .box.unavailable {
+            opacity: 0.6; /* Membuat kartu sedikit transparan */
+            /* pointer-events: none; // Akan diterapkan pada tautan <a>, bukan pada box */
+            cursor: not-allowed;
+        }
+        .vehicles .vehicles-grid .box.unavailable .content h3 {
+            color: #aaa; /* Warna teks lebih terang */
+        }
+        .vehicles .vehicles-grid .box.unavailable .content .price {
+            text-decoration: line-through; /* Coret harga */
+        }
+        .vehicles .vehicles-grid .box.unavailable .status-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.3); /* Overlay merah transparan */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            border-radius: 1rem;
+            z-index: 10; /* Pastikan overlay di atas konten kartu */
+        }
