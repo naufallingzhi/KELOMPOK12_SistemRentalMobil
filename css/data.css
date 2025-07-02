@@ -1,7 +1,19 @@
 @import url('http://fonts.googleapis.com/css/family=Quicksand:400,500&subset=latin-ext');
 
 body {
-    background-image: url(12.png);
+    width: 100%;
+    height: 100vh;
+    background-image: url(showmobil.jpg); /* Pastikan path gambar ini benar */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden; /* Mencegah scroll jika ada konten yang keluar */
+
+    /* ----- PERUBAHAN PENTING DI SINI UNTUK MEMUSATKAN KONTEN ----- */
+    display: flex; /* Mengaktifkan Flexbox untuk body */
+    justify-content: center; /* Memusatkan konten horizontal (container) */
+    align-items: center;     /* Memusatkan konten vertikal (container) */
+    /* ----------------------------------------------------------- */
 }
 
 .container {

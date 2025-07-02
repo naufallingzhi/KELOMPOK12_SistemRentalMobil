@@ -15,8 +15,8 @@
         </div>
         <div class="content">
             <h2>RENTAL<br><span>MOBIL</span></h2>
-            <a href="login.php"><button type="button">login</button></a>
-            <a href="login_admin.php"><button type="button">login for admin</button></a>
+            <a href="login.php"><button type="button">LOGIN</button></a>
+            <a href="login_admin.php"><button type="button">LOGIN FOR ADMIN</button></a>
         </div>
     </div>
 

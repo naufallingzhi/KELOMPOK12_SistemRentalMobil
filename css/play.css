@@ -1,41 +1,71 @@
 @import url('http://fonts.googleapis.com/css/family=Quicksand:400,500&subset=latin-ext');
+/* Jika Anda menggunakan Poppins, pastikan untuk mengimpornya juga: */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 
 body {
-    background-image: url(12.png);
+    width: 100%;
+    height: 100vh;
+    background-image: url(showmobil.jpg); /* Pastikan path gambar ini benar */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden; /* Mencegah scroll jika ada konten yang keluar */
+
+    /* ----- PERUBAHAN PENTING DI SINI UNTUK MEMUSATKAN KONTEN ----- */
+    display: flex; /* Mengaktifkan Flexbox untuk body */
+    justify-content: center; /* Memusatkan konten horizontal (container) */
+    align-items: center;     /* Memusatkan konten vertikal (container) */
+    /* ----------------------------------------------------------- */
 }
 
 .container {
-    width: 50%;
-    padding: 5%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+    /* width: 50%; // Ini bisa membuat terlalu lebar di layar besar atau terlalu sempit di layar sangat kecil */
+    width: 90%; /* Lebih responsif: ambil 90% lebar viewport */
+    max-width: 500px; /* Batasi lebar maksimal agar tidak terlalu besar di desktop */
+
+    /* padding: 5%; // Padding persentase bisa bervariasi. Lebih baik pakai px untuk konsistensi. */
+    padding: 30px; /* Contoh: Padding 30px di semua sisi */
+
+    /* ----- PERUBAHAN PENTING DI SINI UNTUK MEMUSATKAN CONTAINER ----- */
+    margin: auto; /* Ini akan memusatkan container secara horizontal dan vertikal berkat display: flex di body */
+    /* Hapus margin-top: 10px; dan margin-bottom: 10px; agar tidak mengganggu pemusatan vertikal */
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+    /* --------------------------------------------------------------- */
+
+    box-sizing: border-box; /* Pastikan padding termasuk dalam lebar/tinggi */
     background-color: white;
     border-radius: 25px;
 
     font-size: medium;
     font-family: 'Poppins', sans-serif;
+    /* Opsional: Beri tinggi minimal agar tidak terlalu pendek jika kontennya sedikit */
+    /* min-height: 350px; */
 }
 
-h2 {
+h3 {
     text-align: center;
 }
 
 .form {
-    padding-top: 30px;
+    padding-top: 30px; /* Bagus, memberi ruang dari judul */
 }
 
 .input {
     margin: 10px 0px;
     padding: 10px 5px;
-    width: 95%;
+    width: 95%; /* Ini membuat input sedikit keluar karena 95% + padding. */
+    box-sizing: border-box; /* Pastikan ini sudah diatur agar padding tidak menambah lebar */
+    /* Seharusnya 100% jika box-sizing: border-box sudah ada pada input secara global atau diatur di sini */
+    width: 100%; /* Ubah ini agar input mengisi penuh */
 }
 
 .submit {
     margin-top: 10px;
     padding: 10px;
-    width: 97%;
+    /* width: 97%; // Sama seperti input, lebih baik 100% dengan box-sizing */
+    width: 100%;
     border: 1px solid;
     border-radius: 50px;
 
@@ -56,22 +86,28 @@ h2 {
 
 .login {
     display: flex;
-    margin-top: 10%;
-    margin-bottom: 13%;
+    /* margin-top: 10%; // Mungkin terlalu besar, tergantung tinggi layar */
+    /* margin-bottom: 13%; // Mungkin terlalu besar */
+    /* Jika .login ini adalah kontainer tombol Login Akun/Admin yang sebelumnya Anda tanyakan,
+       dan Anda ingin dia berada di tengah bawah form, pertimbangkan ini: */
+    justify-content: center; /* Memusatkan tombol di dalam .login */
+    margin-top: 20px; /* Jarak yang lebih konsisten dari elemen di atasnya */
+    margin-bottom: 0; /* Biarkan margin bawah diatur oleh padding container atau elemen lain */
 }
 
-.login a {  
+.login a {
     text-decoration: none;
     color: blue;
 }
 
-.login .input {
+.login .input { /* Jika ini merujuk ke input username/password di form login */
     border: 1px solid white;
     border-radius: 50px;
     padding-left: 10px;
 
     background-color: rgb(198, 198, 198);
     color: rgb(59, 59, 59);
+    width: 100%; /* Pastikan juga 100% dengan box-sizing */
 }
 
 .login h3 {

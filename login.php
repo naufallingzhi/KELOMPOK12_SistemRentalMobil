@@ -34,11 +34,8 @@ if (isset($_POST['Login'])) {
 </head>
 <body>
     <div class="container login">
-        <div class="logo">
-            <img src="img/auto.webp" alt="logo showroom" width="70%">
-        </div>
         <div class="form-login">
-            <h3>Login</h3>
+            <h3>LOGIN</h3>
             <form method="post">
                 <input type="text" name="username" placeholder="Email atau Username" class="input" required>
                 <input type="password" name="password" placeholder="Password" class="input" required>

@@ -31,7 +31,7 @@ if (isset($_POST['Login'])) {
 <body>
     <div class="container login">
         <div class="form-login">
-            <h3>Admin Login</h3>
+            <h3>ADMIN LOGIN</h3>
             <form method="post">
                 <input type="text" name="username" placeholder="Email atau Username" class="input" required>
                 <input type="password" name="password" placeholder="Password" class="input" required>
