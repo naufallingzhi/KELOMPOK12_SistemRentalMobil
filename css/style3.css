@@ -31,12 +31,10 @@ button {
     border-radius: 5px;
     outline: pointer;
     cursor: pointer;
-    box-shadow: 1px 1px 3px red;
 }
 
 button:hover {
-    background: red;
-    border: 2px solid red;
+    background: red;    
 }
 
 .content {
@@ -62,7 +60,6 @@ h1 {
     letter-spacing: 2px;
     line-height: 60px;
     margin-bottom: 30px;
-    text-shadow: 1px 1px 3px blue;
 }
 
 .content h2 span {

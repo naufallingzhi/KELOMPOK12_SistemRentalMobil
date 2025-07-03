@@ -7,8 +7,10 @@
 
 body {
     padding: 100px;
-    background-image: url(12.png);
+    background-image: url(showmobil.jpg);
     text-align: center;
+    background-size: cover;
+    background-position: center;
     font-family: 'Quicksand', sans-serif;
 }
 /* body { */

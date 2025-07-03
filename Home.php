@@ -83,11 +83,6 @@ require 'config.php';
 <header class="header">
     <div id="menu-btn" class="fas fa-bars"></div>
     <a href="#" class="logo"><span>RENT</span>CARS</a>
-    
-    <nav class="navbar">
-        <a href="create_user.php">Buat Pesanan</a>
-        <button class="dark-mode" onclick="myFunction()">Mode</button>
-    </nav>
 
     <div id="login-btn">
         <?php if (isset($_SESSION['Login']) && $_SESSION['Login'] === true): ?>
@@ -139,18 +134,6 @@ require 'config.php';
         ?>
     </div>
 </section>
-
-<footer class="footer" id="footer">
-    <div class="box-container">
-        <div class="box">
-            <h3>Info Kontak</h3>
-            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="https://www.instagram.com/_jamalllll/"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        </div>
-    </div>
-    <div class="credit">Kelompok 1 B2</div>
-</footer>
 
 <script src="js/script.js"></script>
 </body>

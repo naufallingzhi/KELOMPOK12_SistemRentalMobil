@@ -18,7 +18,7 @@ if (isset($_POST['Login'])) {
         $_SESSION['user_nama'] = $row['nama'];
         
         $nama = htmlspecialchars($row['nama']);
-        echo "<script>alert('Selamat Datang $nama'); location.href='index1.php';</script>";
+        echo "<script>alert('Selamat Datang $nama'); location.href='Home.php';</script>";
     } else {
         echo "<script>alert('Username dan Password Salah');</script>";
     }
@@ -35,7 +35,7 @@ if (isset($_POST['Login'])) {
 <body>
     <div class="container login">
         <div class="form-login">
-            <h3>LOGIN</h3>
+            <h3>LOGIN   </h3>
             <form method="post">
                 <input type="text" name="username" placeholder="Email atau Username" class="input" required>
                 <input type="password" name="password" placeholder="Password" class="input" required>

@@ -37,7 +37,6 @@ if (isset($_POST['Login'])) {
                 <input type="password" name="password" placeholder="Password" class="input" required>
                 <input type="submit" name="Login" value="Login" class="submit">
             </form>
-            <p>Belum punya akun? <a href="register-admin.php">Register</a></p>
         </div>
     </div>
 </body>

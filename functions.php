@@ -25,7 +25,6 @@ echo <<<EOT
     <nav class="navtop">
     	<div>
     		<h1>Admin</h1>
-            <a href="index1.php"><i class="fas fa-home"></i>Home</a>
 			<a href="data.php"><i></i>Dashboard</a>
     		<a href="read.php"><i></i>Pesanan</a>
 			<a href="tambah_mobil.php"><i></i>Kelola Mobil</a>
